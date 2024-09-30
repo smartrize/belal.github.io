@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="navbar">
+        <a href="#" class="logo">Belal</a>
+        <nav>
+            <a href="#" class="active">Home</a>
+            <a href="#services">Services</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+            <a href="login.html" class="nav-link">Login</a>
+            <a href="register.html" class="nav-link active">Register</a>
+        </nav>
+    </header>
+
+    <section class="auth">
+        <h2>Register</h2>
+        <form id="register-form">
+            <div class="input-box">
+                <input type="text" name="username" required>
+                <label>Username</label>
+            </div>
+            <div class="input-box">
+                <input type="email" name="email" required>
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                <input type="password" name="password" required>
+                <label>Password</label>
+            </div>
+            <button type="submit" class="btn">Register</button>
+        </form>
+        <p class="form-response" style="display:none;">Registration successful! Redirecting...</p>
+    </section>
+
+    <script>
+        document.getElementById('register-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.querySelector('.form-response').style.display = 'block';
+            setTimeout(function() {
+                window.location.href = 'index.html'; // Redirect to homepage
+            }, 2000); // Redirect after 2 seconds
+        });
+    </script>
+</body>
+</html>
