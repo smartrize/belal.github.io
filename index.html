@@ -193,20 +193,7 @@
 
     
 
-    <script>
-        document.querySelector(".contact-form").addEventListener("submit", function(event) {
-            event.preventDefault();
-            document.querySelector(".form-response").style.display = "block";
-        });
-    </script>
-
-    <form action="/contact" method="POST">
-        @csrf
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
+    
     
     
 </body>
